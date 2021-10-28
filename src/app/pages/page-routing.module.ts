@@ -7,6 +7,11 @@ import {FormPageComponent} from "./form-page/form-page.component";
 const routes: Routes = [
   {
     path: '', // Chemin par défaut http://localhost:4200 ou serveur renvoie sur /home-page
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home', // Chemin par défaut http://localhost:4200 ou serveur renvoie sur /home-page
     component: HomePageComponent
   },
   {
