@@ -14,8 +14,14 @@ export class ImageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickLikeButton(): void {
-    console.log('Button cliked !');
+  onClickLikeButton(index : number): void {
+    const counterDisplay = document.querySelector('.counter_display[data-index = "'+ index +'"]');
+    if (counterDisplay) {
+      let counterString = counterDisplay.innerHTML;
+      let counterNumber = Number(counterString);
+      counterNumber++;
+      counterDisplay.innerHTML = counterNumber.toString();
+    }
   }
 
 }
