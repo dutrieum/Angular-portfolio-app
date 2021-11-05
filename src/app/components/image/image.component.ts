@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-image',
@@ -8,10 +8,15 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ImageComponent implements OnInit {
 
   @Input() dataPage: any
+  @Output() galleryNewTitle = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  emitGalleryNewTitle(value: string) {
+    this.galleryNewTitle.emit(value);
   }
 
   onClickLikeButton(index : number): void {

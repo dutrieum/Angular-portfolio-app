@@ -1,4 +1,4 @@
 <div class="mx-20 wrap">
-  <p class="text-2xl py-6">Here is the first gallery.</p>
-  <app-image [dataPage]="dataPage"></app-image>
+  <p class="text-2xl py-6">{{galleryNewTitle}}</p>
+  <app-image [dataPage]="dataPage" (galleryNewTitle)="onEmitGalleryNewTitle($event)"></app-image>
 </div>
