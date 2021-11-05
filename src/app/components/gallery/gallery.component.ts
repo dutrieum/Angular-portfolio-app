@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  @Input() dataImages: any
+  @Input() dataPage: any
 
   constructor() { }
 

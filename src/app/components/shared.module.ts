@@ -5,6 +5,7 @@ import {GalleryComponent} from "./gallery/gallery.component";
 import {ImageComponent} from "./image/image.component";
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
+import {UsernameFormatPipe} from "../pipes/username-format.pipe";
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import {RouterModule} from "@angular/router";
     GalleryComponent,
     ImageComponent,
     HeaderComponent,
+    UsernameFormatPipe,
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import {RouterModule} from "@angular/router";
     FormComponent,
     GalleryComponent,
     ImageComponent,
-    HeaderComponent
+    HeaderComponent,
+    UsernameFormatPipe,
   ]
 })
 export class SharedModule { }

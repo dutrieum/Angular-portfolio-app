@@ -15,10 +15,11 @@ export class HomePageComponent implements OnInit {
     this.dataPage = [
       new ImageModel ({
         url: faker.image.imageUrl(140,140,undefined,true, true),
-        desc: 'Lorem ipsum',
+        desc: faker.lorem.words(7),
         height: 250,
         width: 250,
         likes: 4,
+        username: faker.internet.userName(faker.name.findName()),
       }),
       new ImageModel ({
         url: faker.image.imageUrl(140,140,undefined,true, true),
@@ -26,6 +27,7 @@ export class HomePageComponent implements OnInit {
         height: 250,
         width: 250,
         likes: 0,
+        username: faker.internet.userName(faker.name.findName()),
       }),
       new ImageModel ({
         url: faker.image.imageUrl(140,140,undefined,true, true),
@@ -33,6 +35,7 @@ export class HomePageComponent implements OnInit {
         height: 250,
         width: 250,
         likes: 2,
+        username: faker.internet.userName(faker.name.findName()),
       }),
     ]
   }
