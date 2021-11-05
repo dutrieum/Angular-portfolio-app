@@ -5,7 +5,6 @@ export class ImageModel implements Model {
   readonly desc : string
   readonly height : number
   readonly width : number
-  readonly likes : number
   readonly username : string
 
   constructor(input: Partial<ImageModel>) {
@@ -13,7 +12,6 @@ export class ImageModel implements Model {
     this.desc = input.desc || '';
     this.height = input.height || 150;
     this.width = input.width || 150;
-    this.likes = input.likes || 0;
     this.username = input.username || '';
   }
 }

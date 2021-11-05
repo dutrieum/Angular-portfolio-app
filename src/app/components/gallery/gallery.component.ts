@@ -8,7 +8,9 @@ import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 export class GalleryComponent implements OnInit {
 
   @Input() dataPage: any
-  galleryNewTitle : string = 'Here is the first gallery.';
+  @Input() numberOfItem: any
+
+  galleryNewTitle : string = 'Here is a gallery.';
 
   constructor(private readonly changeDetectorRef: ChangeDetectorRef) { }
 

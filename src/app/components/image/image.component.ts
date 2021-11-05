@@ -8,6 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class ImageComponent implements OnInit {
 
   @Input() dataPage: any
+  @Input() numberOfItem: any
   @Output() galleryNewTitle = new EventEmitter<string>();
 
   constructor() { }
@@ -19,8 +20,8 @@ export class ImageComponent implements OnInit {
     this.galleryNewTitle.emit(value);
   }
 
-  onClickLikeButton(index : number): void {
-    const counterDisplay = document.querySelector('.counter_display[data-index = "'+ index +'"]');
+  onClickLikeButton(index : number, numberItem: number): void {
+    const counterDisplay = document.querySelector('.counter_display[data-index = "'+ index +'"][data-number = "'+ numberItem + '"]');
     if (counterDisplay) {
       let counterString = counterDisplay.innerHTML;
       let counterNumber = Number(counterString);

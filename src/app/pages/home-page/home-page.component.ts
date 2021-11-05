@@ -10,6 +10,7 @@ import {ImageModel} from "../../models/image.model";
 export class HomePageComponent implements OnInit {
 
   dataPage : ImageModel[]
+  dataPage2 : ImageModel[]
 
   constructor() {
     this.dataPage = [
@@ -18,7 +19,6 @@ export class HomePageComponent implements OnInit {
         desc: faker.lorem.words(7),
         height: 250,
         width: 250,
-        likes: 4,
         username: faker.internet.userName(faker.name.findName()),
       }),
       new ImageModel ({
@@ -26,7 +26,6 @@ export class HomePageComponent implements OnInit {
         desc: 'Lorem ipsum',
         height: 250,
         width: 250,
-        likes: 0,
         username: faker.internet.userName(faker.name.findName()),
       }),
       new ImageModel ({
@@ -34,10 +33,26 @@ export class HomePageComponent implements OnInit {
         desc: 'Lorem ipsum ipsum ipsum ipsum ipsum',
         height: 250,
         width: 250,
-        likes: 2,
         username: faker.internet.userName(faker.name.findName()),
       }),
-    ]
+    ];
+
+    this.dataPage2 = [
+      new ImageModel ({
+        url: faker.image.imageUrl(140,140,undefined,true, true),
+        desc: faker.lorem.words(7),
+        height: 250,
+        width: 250,
+        username: faker.internet.userName(faker.name.findName()),
+      }),
+      new ImageModel ({
+        url: faker.image.imageUrl(140,140,undefined,true, true),
+        desc:  faker.lorem.words(3),
+        height: 250,
+        width: 250,
+        username: faker.internet.userName(faker.name.findName()),
+      }),
+    ];
   }
 
   ngOnInit(): void {
