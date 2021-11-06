@@ -6,6 +6,7 @@ import {ImageComponent} from "./image/image.component";
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
 import {UsernameFormatPipe} from "../pipes/username-format.pipe";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,10 +16,11 @@ import {UsernameFormatPipe} from "../pipes/username-format.pipe";
     HeaderComponent,
     UsernameFormatPipe,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        ReactiveFormsModule
+    ],
   exports: [
     FormComponent,
     GalleryComponent,

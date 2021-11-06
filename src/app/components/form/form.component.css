@@ -1,0 +1,14 @@
+.error-message {
+  color: red;
+}
+
+.form-field {
+  width: 45%;
+}
+
+.form-field input {
+  background-color: #F2F2F2;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  width: 100%;
+}
