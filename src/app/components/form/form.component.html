@@ -1,39 +1,39 @@
 <div *ngIf="sentValue" class="mt-4">
   <p>Your form has been sent.</p>
-  <button type="submit" class="bg-red-400 text-white py-2 px-4 rounded-xl mt-4" (click)="generateNewForm()">Send a new form again</button>
+  <button type="submit" class="bg-purple-400 text-white py-2 px-4 rounded-xl mt-4" (click)="generateNewForm()">Send a new form again</button>
 </div>
 <form [formGroup]="favoriteThingsForm" *ngIf="sentValue === false" method="post" name="favoriteThingsForm" (ngSubmit)="submitForm()">
   <div class="flex justify-between mt-6">
     <div class="form-field">
       <input formControlName="nameInput" type="text" placeholder="Your name">
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.nameInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.nameInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
     <div class="form-field">
       <input formControlName="emailInput" name="email" type="email" placeholder="Your email">
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.emailInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.emailInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
   </div>
   <div class="flex justify-between mt-6">
     <div class="form-field">
       <input formControlName="drinkInput" type="text" placeholder="Your favorite drink"/>
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.drinkInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.drinkInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
     <div class="form-field">
       <input formControlName="foodInput" type="text" placeholder="Your favorite food"/>
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.foodInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.foodInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
   </div>
   <div class="flex justify-between mt-6">
     <div class="form-field">
       <input formControlName="movieInput" type="text" placeholder="Your favorite movie"/>
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.movieInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.movieInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
     <div class="form-field">
       <input formControlName="singerInput" type="text" placeholder="Your favorite singer"/>
-      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.singerInput.invalid && submittedValue">Field not correctly filled</p>
+      <p class="error-message" *ngIf="this.favoriteThingsForm.controls.singerInput.invalid && submittedValue">Field incorrectly filled</p>
     </div>
   </div>
   <div class="text-right mt-6">
-    <button type="submit" class="bg-red-400 text-white py-2 px-4 rounded-xl" name="send" value="Send Message">Send</button>
+    <button type="submit" class="bg-purple-400 text-white py-2 px-4 rounded-xl" name="send" value="Send Message">Send</button>
   </div>
 </form>

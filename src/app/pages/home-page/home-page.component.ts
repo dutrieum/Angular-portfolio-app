@@ -23,16 +23,16 @@ export class HomePageComponent implements OnInit {
       }),
       new ImageModel ({
         url: faker.image.imageUrl(140,140,undefined,true, true),
-        desc: 'Lorem ipsum',
+        desc: faker.lorem.words(5),
         height: 250,
-        width: 250,
+        width: 300,
         username: faker.internet.userName(faker.name.findName()),
       }),
       new ImageModel ({
         url: faker.image.imageUrl(140,140,undefined,true, true),
-        desc: 'Lorem ipsum ipsum ipsum ipsum ipsum',
-        height: 250,
-        width: 250,
+        desc: faker.lorem.words(6),
+        height: 300,
+        width: 400,
         username: faker.internet.userName(faker.name.findName()),
       }),
     ];
@@ -49,7 +49,7 @@ export class HomePageComponent implements OnInit {
         url: faker.image.imageUrl(140,140,undefined,true, true),
         desc:  faker.lorem.words(3),
         height: 250,
-        width: 250,
+        width: 200,
         username: faker.internet.userName(faker.name.findName()),
       }),
     ];

@@ -29,7 +29,6 @@ export class FormComponent implements OnInit {
 
   submitForm() {
     this.submittedValue = true;
-    console.log(this.favoriteThingsForm.value);
     if (this.favoriteThingsForm.invalid) {
       return
     }
@@ -37,7 +36,6 @@ export class FormComponent implements OnInit {
   }
 
   showValidationMessage() {
-    console.log('Le formulaire est correctement rempli !');
     this.sentValue = true;
   }
 
